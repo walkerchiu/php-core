@@ -25,7 +25,7 @@ trait RepositoryTrait
     /**
      * @param String  $language
      * @param Mixed   $entity
-     * @param Int     $user_id
+     * @param String  $user_id
      * @param String  $items
      * @param String  $type: pair, value, id, object
      * @param Boolean $auto_fill
@@ -244,7 +244,7 @@ trait RepositoryTrait
     */
 
     /**
-     * @param Int    $id
+     * @param String $id
      * @param String $code
      * @return Array
      */

@@ -11,13 +11,13 @@ trait FormHasHostTrait
     */
 
     /**
-     * @param String     $host_type
-     * @param Int        $host_id
-     * @param String     $code
-     * @param Int|String $id
-     * @param Any        $value
-     * @param String     $target
-     * @param Boolean    $target_is_enabled
+     * @param String  $host_type
+     * @param String  $host_id
+     * @param String  $code
+     * @param String  $id
+     * @param Any     $value
+     * @param String  $target
+     * @param Boolean $target_is_enabled
      * @return Boolean
      */
     public function checkExistName($host_type, $host_id, String $code, $id, $value, $target = null, $target_is_enabled = null)
@@ -51,7 +51,7 @@ trait FormHasHostTrait
 
     /**
      * @param String     $host_type
-     * @param Int        $host_id
+     * @param String     $host_id
      * @param String     $code
      * @param Int|String $id
      * @param Any        $value
@@ -94,7 +94,7 @@ trait FormHasHostTrait
 
     /**
      * @param String     $host_type
-     * @param Int        $host_id
+     * @param String     $host_id
      * @param Int|String $id
      * @param String     $target
      * @param Boolean    $target_is_enabled
@@ -128,12 +128,12 @@ trait FormHasHostTrait
     */
 
     /**
-     * @param String     $host_type
-     * @param Int        $host_id
-     * @param Int|String $id
-     * @param Any        $value
-     * @param String     $target
-     * @param Boolean    $target_is_enabled
+     * @param String  $host_type
+     * @param String  $host_id
+     * @param String  $id
+     * @param Any     $value
+     * @param String  $target
+     * @param Boolean $target_is_enabled
      * @return Boolean
      */
     public function checkExistSerial($host_type, $host_id, $id, $value, $target = null, $target_is_enabled = null)
@@ -144,12 +144,12 @@ trait FormHasHostTrait
     }
 
     /**
-     * @param String     $host_type
-     * @param Int        $host_id
-     * @param Int|String $id
-     * @param Any        $value
-     * @param String     $target
-     * @param Boolean    $target_is_enabled
+     * @param String  $host_type
+     * @param String  $host_id
+     * @param String  $id
+     * @param Any     $value
+     * @param String  $target
+     * @param Boolean $target_is_enabled
      * @return Boolean
      */
     public function checkExistSerialOfEnabled($host_type, $host_id, $id, $value, $target = null, $target_is_enabled = null)
@@ -167,12 +167,12 @@ trait FormHasHostTrait
     */
 
     /**
-     * @param String     $host_type
-     * @param Int        $host_id
-     * @param Int|String $id
-     * @param Any        $value
-     * @param String     $target
-     * @param Boolean    $target_is_enabled
+     * @param String  $host_type
+     * @param String  $host_id
+     * @param String  $id
+     * @param Any     $value
+     * @param String  $target
+     * @param Boolean $target_is_enabled
      * @return Boolean
      */
     public function checkExistIdentifier($host_type, $host_id, $id, $value, $target = null, $target_is_enabled = null)
@@ -183,12 +183,12 @@ trait FormHasHostTrait
     }
 
     /**
-     * @param String     $host_type
-     * @param Int        $host_id
-     * @param Int|String $id
-     * @param Any        $value
-     * @param String     $target
-     * @param Boolean    $target_is_enabled
+     * @param String  $host_type
+     * @param String  $host_id
+     * @param String  $id
+     * @param Any     $value
+     * @param String  $target
+     * @param Boolean $target_is_enabled
      * @return Boolean
      */
     public function checkExistIdentifierOfEnabled($host_type, $host_id, $id, $value, $target = null, $target_is_enabled = null)

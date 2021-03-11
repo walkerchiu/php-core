@@ -15,9 +15,9 @@ class LogSysService
 
     /**
      * @param String  $host_type
-     * @param Int     $host_id
+     * @param String  $host_id
      * @param String  $morph_type
-     * @param Int     $morph_id
+     * @param String  $morph_id
      * @param String  $type
      * @param Array   $summary
      * @param Array   $data

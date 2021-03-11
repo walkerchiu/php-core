@@ -25,7 +25,7 @@ trait LangTrait
         $lang = $this->langs->where('is_current', 1)
                             ->where('code', $code)
                             ->where('key', $key)
-                            ->sortByDESC('id')
+                            ->sortByDESC('updated_at')
                             ->first();
         if ($type == 'value')
             return empty($lang) ? null : $lang->value;
@@ -42,7 +42,7 @@ trait LangTrait
     {
         $lang = $this->langs->where('is_current', 1)
                             ->where('key', $key)
-                            ->sortByDESC('id')
+                            ->sortByDESC('updated_at')
                             ->first();
         if ($type == 'value')
             return empty($lang) ? null : $lang->value;
@@ -60,7 +60,7 @@ trait LangTrait
         return $this->langs->where('is_current', 0)
                            ->where('code', $code)
                            ->where('key', $key)
-                           ->sortByDESC('id')
+                           ->sortByDESC('updated_at')
                            ->all();
     }
 }

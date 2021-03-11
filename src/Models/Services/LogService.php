@@ -18,11 +18,11 @@ class LogService
 
     /**
      * @param String  $host_type
-     * @param Int     $host_id
+     * @param String  $host_id
      * @param String  $morph_type
-     * @param Int     $morph_id
+     * @param String  $morph_id
      * @param String  $type
-     * @param Int     $user_id
+     * @param String  $user_id
      * @param Array   $summary
      * @param Array   $data
      * @param Array   $header

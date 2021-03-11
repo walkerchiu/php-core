@@ -6,7 +6,7 @@ trait CheckExistTrait
 {
     /**
      * @param String $serial
-     * @param Int    $id
+     * @param String $id
      * @return Boolean
      */
     public function checkExistSerial(String $serial, $id = null)
@@ -20,7 +20,7 @@ trait CheckExistTrait
 
     /**
      * @param String $identifier
-     * @param Int    $id
+     * @param String $id
      * @return Boolean
      */
     public function checkExistIdentifier(String $identifier, $id = null)
@@ -34,7 +34,7 @@ trait CheckExistTrait
 
     /**
      * @param Boolean $is_enabled
-     * @param Int     $id
+     * @param String  $id
      * @return Boolean
      */
     public function checkExistIsEnabled(String $is_enabled, $id = null)
@@ -48,7 +48,7 @@ trait CheckExistTrait
 
     /**
      * @param Boolean $is_highlighted
-     * @param Int     $id
+     * @param String  $id
      * @return Boolean
      */
     public function checkExistIsHighlighted(String $is_highlighted, $id = null)

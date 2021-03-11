@@ -96,11 +96,11 @@ abstract class Repository
     }
 
     /**
-     * @param Int|String $id
-     * @param Array      $relations
+     * @param String $id
+     * @param Array  $relations
      * @return Entity
      */
-    public function find($id, $relations = null)
+    public function find(String $id, $relations = null)
     {
         return $this->entity->unless(empty($relations), function ($query) use ($relations) {
                                 return $query->with($relations);
@@ -139,11 +139,11 @@ abstract class Repository
     }
 
     /**
-     * @param Int|String $id
-     * @param Array      $relations
+     * @param String $id
+     * @param Array  $relations
      * @return Entity
      */
-    public function findOrFail($id, $relations = null)
+    public function findOrFail(String $id, $relations = null)
     {
         return $this->entity->unless(empty($relations), function ($query) use ($relations) {
                                 return $query->with($relations);
@@ -152,11 +152,11 @@ abstract class Repository
     }
 
     /**
-     * @param Int|String $id
-     * @param Array      $relations
+     * @param String $id
+     * @param Array  $relations
      * @return Entity
      */
-    public function findWithTrashed($id, $relations = null)
+    public function findWithTrashed(String $id, $relations = null)
     {
         return $this->entity->withTrashed()
                             ->unless(empty($relations), function ($query) use ($relations) {
@@ -166,11 +166,11 @@ abstract class Repository
     }
 
     /**
-     * @param Int|String $id
-     * @param Array      $relations
+     * @param String $id
+     * @param Array  $relations
      * @return Entity
      */
-    public function findOrFailWithTrashed($id, $relations = null)
+    public function findOrFailWithTrashed(String $id, $relations = null)
     {
         return $this->entity->withTrashed()
                             ->unless(empty($relations), function ($query) use ($relations) {
@@ -187,10 +187,10 @@ abstract class Repository
     */
 
     /**
-     * @param Int|String $id
+     * @param String $id
      * @return Boolean
      */
-    public function enableById($id)
+    public function enableById(String $id)
     {
         $entity = $this->find($id);
 
@@ -218,10 +218,10 @@ abstract class Repository
     }
 
     /**
-     * @param Int|String $id
+     * @param String $id
      * @return Boolean
      */
-    public function disableById($id)
+    public function disableById(String $id)
     {
         $entity = $this->find($id);
 

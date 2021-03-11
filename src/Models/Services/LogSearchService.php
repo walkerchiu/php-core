@@ -18,10 +18,10 @@ class LogSearchService
 
     /**
      * @param String $host_type
-     * @param Int    $host_id
+     * @param String $host_id
      * @param String $morph_type
-     * @param Int    $morph_id
-     * @param Int    $user_id
+     * @param String $morph_id
+     * @param String $user_id
      * @param String $keyword
      * @param Array  $data
      * @return LogSearch
@@ -42,7 +42,7 @@ class LogSearchService
 
     /**
      * @param String  $host_type
-     * @param Int     $host_id
+     * @param String  $host_id
      * @param Array   $data
      * @param Int     $days
      * @param Boolean $groupByUser
@@ -118,7 +118,7 @@ class LogSearchService
 
     /**
      * @param String  $host_type
-     * @param Int     $host_id
+     * @param String  $host_id
      * @param Array   $data
      * @param Int     $days
      * @param Boolean $groupByUser

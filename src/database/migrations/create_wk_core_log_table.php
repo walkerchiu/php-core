@@ -10,10 +10,10 @@ class CreateWkCoreLogTable extends Migration
     {
         Schema::create(config('wk-core.table.core.logs'), function (Blueprint $table) {
             $table->uuid('id');
-            $table->nullableMorphs('host');
-            $table->nullableMorphs('morph');
+            $table->nullableUuidMorphs('host');
+            $table->nullableUuidMorphs('morph');
             $table->string('type')->nullable();
-            $table->unsignedBigInteger('user_id')->nullable();
+            $table->uuid('user_id')->nullable();
             $table->json('summary')->nullable();
             $table->json('data');
             $table->json('header');
@@ -35,8 +35,8 @@ class CreateWkCoreLogTable extends Migration
 
         Schema::create(config('wk-core.table.core.logs_sys'), function (Blueprint $table) {
             $table->uuid('id');
-            $table->nullableMorphs('host');
-            $table->nullableMorphs('morph');
+            $table->nullableUuidMorphs('host');
+            $table->nullableUuidMorphs('morph');
             $table->string('type')->nullable();
             $table->json('summary')->nullable();
             $table->json('data');
@@ -52,9 +52,9 @@ class CreateWkCoreLogTable extends Migration
 
         Schema::create(config('wk-core.table.core.logs_search'), function (Blueprint $table) {
             $table->uuid('id');
-            $table->nullableMorphs('host');
-            $table->nullableMorphs('morph');
-            $table->unsignedBigInteger('user_id')->nullable();
+            $table->nullableUuidMorphs('host');
+            $table->nullableUuidMorphs('morph');
+            $table->uuid('user_id')->nullable();
             $table->string('keyword')->nullable();
             $table->json('data');
 

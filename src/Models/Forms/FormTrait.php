@@ -12,9 +12,9 @@ trait FormTrait
 
     /**
      * @param $relation
-     * @param String     $code
-     * @param Int|String $id
-     * @param Any        $value
+     * @param String $code
+     * @param String $id
+     * @param Any    $value
      * @return Boolean
      */
     public function checkExistName(String $code, $id, $value)
@@ -34,9 +34,9 @@ trait FormTrait
 
     /**
      * @param $relation
-     * @param String     $code
-     * @param Int|String $id
-     * @param Any        $value
+     * @param String $code
+     * @param String $id
+     * @param Any    $value
      * @return Boolean
      */
     public function checkExistNameOfEnabled(String $code, $id, $value)
@@ -58,7 +58,7 @@ trait FormTrait
 
 
     /**
-     * @param Int|String $id
+     * @param String $id
      * @return Query
      */
     public function baseQueryForForm($id)
@@ -75,8 +75,8 @@ trait FormTrait
     */
 
     /**
-     * @param Int|String $id
-     * @param Any        $value
+     * @param String $id
+     * @param Any    $value
      * @return Boolean
      */
     public function checkExistSerial($id, $value)
@@ -87,8 +87,8 @@ trait FormTrait
     }
 
     /**
-     * @param Int|String $id
-     * @param Any        $value
+     * @param String $id
+     * @param Any    $value
      * @return Boolean
      */
     public function checkExistSerialOfEnabled($id, $value)
@@ -106,8 +106,8 @@ trait FormTrait
     */
 
     /**
-     * @param Int|String $id
-     * @param Any        $value
+     * @param String $id
+     * @param Any    $value
      * @return Boolean
      */
     public function checkExistIdentifier($id, $value)
@@ -118,8 +118,8 @@ trait FormTrait
     }
 
     /**
-     * @param Int|String $id
-     * @param Any        $value
+     * @param String $id
+     * @param Any    $value
      * @return Boolean
      */
     public function checkExistIdentifierOfEnabled($id, $value)

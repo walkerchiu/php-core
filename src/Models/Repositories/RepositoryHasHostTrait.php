@@ -25,7 +25,7 @@ trait RepositoryHasHostTrait
     /**
      * @param String  $language
      * @param Mixed   $entity
-     * @param Int     $user_id
+     * @param String  $user_id
      * @param String  $items
      * @param String  $type: pair, value, id, object
      * @param Boolean $auto_fill
@@ -68,7 +68,7 @@ trait RepositoryHasHostTrait
 
     /**
      * @param String  $host_type
-     * @param Int     $host_id
+     * @param String  $host_id
      * @param String  $target
      * @param Boolean $target_is_enabled
      * @return Query
@@ -99,7 +99,7 @@ trait RepositoryHasHostTrait
 
     /**
      * @param String  $host_type
-     * @param Int     $host_id
+     * @param String  $host_id
      * @param String  $column
      * @param String  $operate
      * @param Any     $value
@@ -116,7 +116,7 @@ trait RepositoryHasHostTrait
 
     /**
      * @param String  $host_type
-     * @param Int     $host_id
+     * @param String  $host_id
      * @param String  $column
      * @param String  $operate
      * @param Any     $value
@@ -139,7 +139,7 @@ trait RepositoryHasHostTrait
 
     /**
      * @param String  $host_type
-     * @param Int     $host_id
+     * @param String  $host_id
      * @param String  $target
      * @param Boolean $target_is_enabled
      * @return Array
@@ -152,7 +152,7 @@ trait RepositoryHasHostTrait
 
     /**
      * @param String  $host_type
-     * @param Int     $host_id
+     * @param String  $host_id
      * @param String  $target
      * @param Boolean $target_is_enabled
      * @return Array
@@ -166,7 +166,7 @@ trait RepositoryHasHostTrait
 
     /**
      * @param String  $host_type
-     * @param Int     $host_id
+     * @param String  $host_id
      * @param String  $target
      * @param Boolean $target_is_enabled
      * @return Array
@@ -180,7 +180,7 @@ trait RepositoryHasHostTrait
 
     /**
      * @param String  $host_type
-     * @param Int     $host_id
+     * @param String  $host_id
      * @param String  $target
      * @param Boolean $target_is_enabled
      * @return Array
@@ -200,7 +200,7 @@ trait RepositoryHasHostTrait
 
     /**
      * @param String  $host_type
-     * @param Int     $host_id
+     * @param String  $host_id
      * @param String  $code
      * @param Array   $data
      * @param Int     $page
@@ -216,7 +216,7 @@ trait RepositoryHasHostTrait
 
     /**
      * @param String  $host_type
-     * @param Int     $host_id
+     * @param String  $host_id
      * @param String  $code
      * @param Array   $data
      * @param Int     $page
@@ -238,7 +238,7 @@ trait RepositoryHasHostTrait
 
     /**
      * @param String  $host_type
-     * @param Int     $host_id
+     * @param String  $host_id
      * @param String  $code
      * @param Any     $value
      * @param Int     $count
@@ -285,7 +285,7 @@ trait RepositoryHasHostTrait
 
     /**
      * @param String  $host_type
-     * @param Int     $host_id
+     * @param String  $host_id
      * @param String  $code
      * @param Any     $value
      * @param Int     $count

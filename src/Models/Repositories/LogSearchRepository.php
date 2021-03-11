@@ -22,7 +22,7 @@ class LogSearchRepository extends Repository
 
     /**
      * @param String  $host_type
-     * @param Int     $host_id
+     * @param String  $host_id
      * @param String  $code
      * @param Array   $data
      * @param Int     $page
@@ -116,7 +116,7 @@ class LogSearchRepository extends Repository
 
     /**
      * @param String $host_type
-     * @param Int    $host_id
+     * @param String $host_id
      * @param Array  $data
      * @param Int    $days
      * @return Collection
@@ -152,7 +152,7 @@ class LogSearchRepository extends Repository
 
     /**
      * @param String $host_type
-     * @param Int    $host_id
+     * @param String $host_id
      * @param Array  $data
      * @param Int    $days
      * @return Collection
