@@ -5,14 +5,72 @@ namespace WalkerChiu\Core\Models\Services;
 Trait EnDecryptTrait
 {
     /**
+     * Return part of a string with SHA256
+     *
+     * @param String $string
+     * @param Int    $length
+     * @param Int    $from
+     * @return String
+     */
+    public static function sha256($string, $length, $from = 0) {
+        $string = utf8_encode(trim($string));
+
+        return substr(hash('sha256', $string), $from, $length);
+    }
+
+    /**
      * AES Encrypt
+     *
+     * @param String $plaintext
+     * @param String $passphrase
+     * @param String $iv
+     * @param String $options (OPENSSL_RAW_DATA | OPENSSL_ZERO_PADDING)
+     * @param String $cipher_algo
+     * @return String
+     */
+    public static function aes_encrypt(String $plaintext, String $passphrase, String $iv, $options = OPENSSL_RAW_DATA, $cipher_algo = 'aes-256-cfb8') {
+        $plaintext  = trim($plaintext);
+        $passphrase = utf8_encode($this->sha256($passphrase, 32));
+        $iv         = utf8_encode($this->sha256($iv, 16));
+
+        $encrypted = openssl_encrypt($plaintext, $cipher_algo, $passphrase, $options, $iv);
+
+        return base64_encode($encrypted);
+    }
+
+    /**
+     * AES Decrypt
+     *
+     * @param String $cipertext
+     * @param String $passphrase
+     * @param String $iv
+     * @param String $options (OPENSSL_RAW_DATA | OPENSSL_ZERO_PADDING)
+     * @param String $cipher_algo
+     * @return String
+     */
+    public static function aes_decrypt(String $cipertext, String $passphrase, String $iv, $options = OPENSSL_RAW_DATA, $cipher_algo = 'aes-256-cfb8') {
+        $string     = base64_decode($cipertext);
+        $passphrase = utf8_encode($this->sha256($passphrase, 32));
+        $iv         = utf8_encode($this->sha256($iv, 16));
+
+        $plaintext = openssl_decrypt($string, $cipher_algo, $passphrase, $options, $iv);
+
+        return $plaintext;
+    }
+
+
+
+    /**
+     * AES CBC Encrypt (For NewebPay)
+     * 
+     * Reference: create_mpg_aes_encrypt
      *
      * @param String $parameter
      * @param String $key
      * @param String $iv
      * @return String
      */
-    public function create_mpg_aes_encrypt($parameter = '', $key = '', $iv = '')
+    public static function aes_cbc_encrypt_newebpay($parameter = '', $key = '', $iv = '')
     {
         $return_str = '';
 
@@ -42,14 +100,14 @@ Trait EnDecryptTrait
     }
 
     /**
-     * AES Decrypt
+     * AES CBC Decrypt (For NewebPay)
      *
      * @param String $aes_str
      * @param String $key
      * @param String $iv
      * @return String
      */
-    public function aes_decrypt(String $aes_str, String $key, String $iv)
+    public static function aes_cbc_decrypt_newebpay(String $aes_str, String $key, String $iv)
     {
         $aes_str = str_replace(' ', '+', $aes_str);
 
@@ -134,7 +192,7 @@ Trait EnDecryptTrait
         return $data;
     }
 
-    private static function pkcs5_pad (String $text, Int $blocksize)
+    private static function pkcs5_pad(String $text, Int $blocksize)
     { 
         $pad = $blocksize - (strlen($text) % $blocksize);
 
