@@ -87,9 +87,11 @@ class LogRepository extends Repository
                                                     ->whereIn('id', $data['tags']);
                                           });
                                       })
-                                      ->unless(empty($data['orderBy']) || empty($data['orderType']), function ($query) use ($data) {
-                                          return $query->orderBy($data['orderBy'], $data['orderType']);
-                                      });
+                                      ->unless(!empty($data['orderBy']) && !empty($data['orderType']), function ($query) use ($data) {
+                                            return $query->orderBy($data['orderBy'], $data['orderType']);
+                                        }, function ($query) {
+                                            return $query->orderBy('updated_at', 'DESC');
+                                        });
                             }, function ($query) {
                                 return $query->orderBy('updated_at', 'DESC');
                             })
