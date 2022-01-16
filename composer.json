@@ -1,0 +1,51 @@
+{
+    "name": "walkerchiu/php-core",
+    "type": "library",
+    "authors": [
+        {
+            "name":  "Walker Chiu",
+            "email": "chenjen.chiou@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.3",
+        "ramsey/uuid": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WalkerChiu\\Core\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WalkerChiu\\Core\\CoreServiceProvider"
+            ],
+            "aliases": {
+                "Baud":        "WalkerChiu\\Core\\Models\\Constants\\Baud",
+                "Condition":   "WalkerChiu\\Core\\Models\\Constants\\Condition",
+                "CountryZone": "WalkerChiu\\Core\\Models\\Constants\\CountryZone",
+                "DataType":    "WalkerChiu\\Core\\Models\\Constants\\DataType",
+                "Filter":      "WalkerChiu\\Core\\Models\\Constants\\Filter",
+                "Language":    "WalkerChiu\\Core\\Models\\Constants\\Language",
+                "Operator":    "WalkerChiu\\Core\\Models\\Constants\\Operator",
+                "Parity":      "WalkerChiu\\Core\\Models\\Constants\\Parity",
+                "Stopbit":     "WalkerChiu\\Core\\Models\\Constants\\Stopbit",
+                "TimeZone":    "WalkerChiu\\Core\\Models\\Constants\\TimeZone",
+                "LangCore":    "WalkerChiu\\Core\\Models\\Entities\\LangCore",
+                "Log":         "WalkerChiu\\Core\\Models\\Entities\\Log",
+                "LogRequest":  "WalkerChiu\\Core\\Models\\Entities\\LogRequest",
+                "LogSearch":   "WalkerChiu\\Core\\Models\\Entities\\LogSearch",
+                "LogSys":      "WalkerChiu\\Core\\Models\\Entities\\LogSys"
+            }
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}
