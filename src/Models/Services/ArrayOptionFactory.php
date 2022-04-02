@@ -3,7 +3,6 @@
 namespace WalkerChiu\Core\Models\Services;
 
 use Illuminate\Support\Facades\Request;
-use WalkerChiu\Core\Models\Exceptions\NotExpectedEntityException;
 
 class ArrayOptionFactory
 {
@@ -62,14 +61,10 @@ class ArrayOptionFactory
      * @param String  $delimiter_before
      * @return void
      *
-     * @throws NotExpectedEntityException
+     * @throws TypeError
      */
     public function setDelimiterBefore(string $delimiter_before): void
     {
-        if (!is_string($delimiter_before)) {
-            throw new NotExpectedEntityException($delimiter_before);
-        }
-
         $this->delimiter_before = $delimiter_before;
     }
 
@@ -77,14 +72,10 @@ class ArrayOptionFactory
      * @param String  $delimiter_after
      * @return void
      *
-     * @throws NotExpectedEntityException
+     * @throws TypeError
      */
     public function setDelimiterAfter(string $delimiter_after): void
     {
-        if (!is_string($delimiter_after)) {
-            throw new NotExpectedEntityException($delimiter_after);
-        }
-
         $this->delimiter_after = $delimiter_after;
     }
 
@@ -99,17 +90,10 @@ class ArrayOptionFactory
      * @param Array  $input
      * @return Array
      *
-     * @throws NotExpectedEntityException
+     * @throws TypeError
      */
     public function transformKey(?array $input): array
     {
-        if (
-            !is_null($input)
-            && !is_array($input)
-        ) {
-            throw new NotExpectedEntityException($input);
-        }
-
         $items = [];
         foreach ($input as $key => $value) {
             $key = str_replace($this->delimiter_before, $this->delimiter_after, $key);
@@ -123,17 +107,10 @@ class ArrayOptionFactory
      * @param Array  $input
      * @return Array
      *
-     * @throws NotExpectedEntityException
+     * @throws TypeError
      */
     public function transformValue(?array $input): array
     {
-        if (
-            !is_null($input)
-            && !is_array($input)
-        ) {
-            throw new NotExpectedEntityException($input);
-        }
-
         $items = [];
         foreach ($input as $item) {
             array_push($items, str_replace($this->delimiter_before, $this->delimiter_after, $item));

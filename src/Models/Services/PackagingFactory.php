@@ -3,7 +3,6 @@
 namespace WalkerChiu\Core\Models\Services;
 
 use Illuminate\Support\Facades\Request;
-use WalkerChiu\Core\Models\Exceptions\NotExpectedEntityException;
 use WalkerChiu\Core\Models\Exceptions\NotUnsignedIntegerException;
 
 class PackagingFactory
@@ -73,6 +72,8 @@ class PackagingFactory
     /**
      * @param String  $output_format
      * @return void
+     *
+     * @throws TypeError
      */
     public function setOutputFormat(?string $output_format): void
     {
@@ -84,6 +85,8 @@ class PackagingFactory
     /**
      * @param String  $pageName
      * @return void
+     *
+     * @throws TypeError
      */
     public function setPageName(?string $pageName): void
     {
@@ -119,17 +122,10 @@ class PackagingFactory
      * @param Array  $fields
      * @return void
      *
-     * @throws NotExpectedEntityException
+     * @throws TypeError
      */
     public function setFields(array $fields): void
     {
-        if (
-            !is_null($fields)
-            && !is_array($fields)
-        ) {
-            throw new NotExpectedEntityException($fields);
-        }
-
         $this->fields = $fields;
     }
 
@@ -137,17 +133,10 @@ class PackagingFactory
      * @param Array  $fields_lang
      * @return void
      *
-     * @throws NotExpectedEntityException
+     * @throws TypeError
      */
     public function setFieldsLang(array $fields_lang): void
     {
-        if (
-            !is_null($fields_lang)
-            && !is_array($fields_lang)
-        ) {
-            throw new NotExpectedEntityException($fields_lang);
-        }
-
         $this->fields_lang = $fields_lang;
     }
 
