@@ -434,6 +434,7 @@ $config = [
             'logSysObserver'       => 'WalkerChiu\Core\Models\Observers\LogSysObserver',
             'logSysRepository'     => 'WalkerChiu\Core\Models\Repositories\LogSysRepository',
             'commonMiddleware'     => 'WalkerChiu\Core\Middleware\CommonMiddleware',
+            'cors'                 => 'WalkerChiu\Core\Middleware\CORSMiddleware',
             'locale'               => 'WalkerChiu\Core\Middleware\Locale',
             'preventBackHistory'   => 'WalkerChiu\Core\Middleware\PreventBackHistory'
         ],

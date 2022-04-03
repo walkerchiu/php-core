@@ -16,6 +16,9 @@ class CoreServiceProvider extends ServiceProvider
     {
         $this->mergeConfig();
 
+        // For Laravel 5.4
+        // $this->app['router']->aliasMiddleware('wkCORS' , config('wk-core.class.core.cors'));
+
         $this->app['router']->aliasMiddleware('wkCommon' , config('wk-core.class.core.commonMiddleware'));
         $this->app['router']->aliasMiddleware('wkPreventBackHistory' , config('wk-core.class.core.preventBackHistory'));
     }
