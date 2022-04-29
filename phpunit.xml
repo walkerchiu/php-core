@@ -1,0 +1,7 @@
+<phpunit>
+    <testsuites>
+        <testsuite name="Unit">
+            <directory suffix="ArrayOptionFactoryTest.php">./tests/Services</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
