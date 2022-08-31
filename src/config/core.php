@@ -396,6 +396,14 @@ $config = [
             'layouts'      => 'site_layouts',
             'layouts_lang' => 'site_layouts_lang'
         ],
+        'site-cms' => [
+            'sites'        => 'site_cms_sites',
+            'sites_lang'   => 'site_cms_sites_lang',
+            'emails'       => 'site_cms_emails',
+            'emails_lang'  => 'site_cms_emails_lang',
+            'layouts'      => 'site_cms_layouts',
+            'layouts_lang' => 'site_cms_layouts_lang'
+        ],
 
         // Other package
         'user' => 'users'
@@ -958,6 +966,26 @@ $config = [
             'layoutLangObserver' => 'WalkerChiu\Site\Models\Observers\LayoutLangObserver',
             'layoutRepository'   => 'WalkerChiu\Site\Models\Repositories\LayoutRepository',
             'verifyEnable'       => 'WalkerChiu\Site\Middleware\verifyEnable'
+        ],
+        'site-cms' => [
+            'emailType'          => 'WalkerChiu\SiteCMS\Models\Constants\EmailType',
+            'layoutType'         => 'WalkerChiu\SiteCMS\Models\Constants\LayoutType',
+            'site'               => 'WalkerChiu\SiteCMS\Models\Entities\Site',
+            'siteObserver'       => 'WalkerChiu\SiteCMS\Models\Observers\SiteObserver',
+            'siteLang'           => 'WalkerChiu\SiteCMS\Models\Entities\SiteLang',
+            'siteLangObserver'   => 'WalkerChiu\SiteCMS\Models\Observers\SiteLangObserver',
+            'siteRepository'     => 'WalkerChiu\SiteCMS\Models\Repositories\SiteRepository',
+            'email'              => 'WalkerChiu\SiteCMS\Models\Entities\Email',
+            'emailObserver'      => 'WalkerChiu\SiteCMS\Models\Observers\EmailObserver',
+            'emailLang'          => 'WalkerChiu\SiteCMS\Models\Entities\EmailLang',
+            'emailLangObserver'  => 'WalkerChiu\SiteCMS\Models\Observers\EmailLangObserver',
+            'emailRepository'    => 'WalkerChiu\SiteCMS\Models\Repositories\EmailRepository',
+            'layout'             => 'WalkerChiu\SiteCMS\Models\Entities\Layout',
+            'layoutObserver'     => 'WalkerChiu\SiteCMS\Models\Observers\LayoutObserver',
+            'layoutLang'         => 'WalkerChiu\SiteCMS\Models\Entities\LayoutLang',
+            'layoutLangObserver' => 'WalkerChiu\SiteCMS\Models\Observers\LayoutLangObserver',
+            'layoutRepository'   => 'WalkerChiu\SiteCMS\Models\Repositories\LayoutRepository',
+            'verifyEnable'       => 'WalkerChiu\SiteCMS\Middleware\verifyEnable'
         ]
     ]
 ];
