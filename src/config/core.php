@@ -248,6 +248,12 @@ $config = [
             'channels_lang' => 'mall_cart_channels_lang',
             'items'         => 'mall_cart_items'
         ],
+        'mall-merchandise' => [
+            'products'      => 'mall_shelf_products',
+            'products_lang' => 'mall_shelf_products_lang',
+            'variants'      => 'mall_shelf_variants',
+            'variants_lang' => 'mall_shelf_variants_lang'
+        ],
         'mall-order' => [
             'orders'  => 'mall_order_orders',
             'reviews' => 'mall_order_reviews'
@@ -629,6 +635,18 @@ $config = [
             'item'                => 'WalkerChiu\MallCart\Models\Entities\Item',
             'itemObserver'        => 'WalkerChiu\MallCart\Models\Observers\ItemObserver',
             'itemRepository'      => 'WalkerChiu\MallCart\Models\Repositories\ItemRepository'
+        ],
+        'mall-merchandise' => [
+            'product'             => 'WalkerChiu\MallMerchandise\Models\Entities\Product',
+            'productObserver'     => 'WalkerChiu\MallMerchandise\Models\Observers\ProductObserver',
+            'productRepository'   => 'WalkerChiu\MallMerchandise\Models\Repositories\ProductRepository',
+            'productLang'         => 'WalkerChiu\MallMerchandise\Models\Entities\ProductLang',
+            'productLangObserver' => 'WalkerChiu\MallMerchandise\Models\Observers\ProductLangObserver',
+            'variant'             => 'WalkerChiu\MallMerchandise\Models\Entities\Variant',
+            'variantObserver'     => 'WalkerChiu\MallMerchandise\Models\Observers\VariantObserver',
+            'variantRepository'   => 'WalkerChiu\MallMerchandise\Models\Repositories\VariantRepository',
+            'variantLang'         => 'WalkerChiu\MallMerchandise\Models\Entities\VariantLang',
+            'variantLangObserver' => 'WalkerChiu\MallMerchandise\Models\Observers\VariantLangObserver',
         ],
         'mall-order' => [
             'orderState'       => 'WalkerChiu\MallOrder\Models\Constants\OrderState',
