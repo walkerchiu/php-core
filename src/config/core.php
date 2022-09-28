@@ -394,14 +394,6 @@ $config = [
             't_cat'           => 'shipment_t_cat',
             'ups'             => 'shipment_ups'
         ],
-        'site' => [
-            'sites'        => 'site_sites',
-            'sites_lang'   => 'site_sites_lang',
-            'emails'       => 'site_emails',
-            'emails_lang'  => 'site_emails_lang',
-            'layouts'      => 'site_layouts',
-            'layouts_lang' => 'site_layouts_lang'
-        ],
         'site-cms' => [
             'sites'        => 'site_cms_sites',
             'sites_lang'   => 'site_cms_sites_lang',
@@ -409,6 +401,14 @@ $config = [
             'emails_lang'  => 'site_cms_emails_lang',
             'layouts'      => 'site_cms_layouts',
             'layouts_lang' => 'site_cms_layouts_lang'
+        ],
+        'site-mall' => [
+            'sites'        => 'site_mall_sites',
+            'sites_lang'   => 'site_mall_sites_lang',
+            'emails'       => 'site_mall_emails',
+            'emails_lang'  => 'site_mall_emails_lang',
+            'layouts'      => 'site_mall_layouts',
+            'layouts_lang' => 'site_mall_layouts_lang'
         ],
 
         // Other package
@@ -965,26 +965,6 @@ $config = [
             'upsObserver'              => 'WalkerChiu\Shipment\Models\Observers\UPSObserver',
             'upsRepository'            => 'WalkerChiu\Shipment\Models\Repositories\UPSRepository'
         ],
-        'site' => [
-            'emailType'          => 'WalkerChiu\Site\Models\Constants\EmailType',
-            'layoutType'         => 'WalkerChiu\Site\Models\Constants\LayoutType',
-            'site'               => 'WalkerChiu\Site\Models\Entities\Site',
-            'siteObserver'       => 'WalkerChiu\Site\Models\Observers\SiteObserver',
-            'siteLang'           => 'WalkerChiu\Site\Models\Entities\SiteLang',
-            'siteLangObserver'   => 'WalkerChiu\Site\Models\Observers\SiteLangObserver',
-            'siteRepository'     => 'WalkerChiu\Site\Models\Repositories\SiteRepository',
-            'email'              => 'WalkerChiu\Site\Models\Entities\Email',
-            'emailObserver'      => 'WalkerChiu\Site\Models\Observers\EmailObserver',
-            'emailLang'          => 'WalkerChiu\Site\Models\Entities\EmailLang',
-            'emailLangObserver'  => 'WalkerChiu\Site\Models\Observers\EmailLangObserver',
-            'emailRepository'    => 'WalkerChiu\Site\Models\Repositories\EmailRepository',
-            'layout'             => 'WalkerChiu\Site\Models\Entities\Layout',
-            'layoutObserver'     => 'WalkerChiu\Site\Models\Observers\LayoutObserver',
-            'layoutLang'         => 'WalkerChiu\Site\Models\Entities\LayoutLang',
-            'layoutLangObserver' => 'WalkerChiu\Site\Models\Observers\LayoutLangObserver',
-            'layoutRepository'   => 'WalkerChiu\Site\Models\Repositories\LayoutRepository',
-            'verifyEnable'       => 'WalkerChiu\Site\Middleware\verifyEnable'
-        ],
         'site-cms' => [
             'emailType'          => 'WalkerChiu\SiteCMS\Models\Constants\EmailType',
             'layoutType'         => 'WalkerChiu\SiteCMS\Models\Constants\LayoutType',
@@ -1004,6 +984,26 @@ $config = [
             'layoutLangObserver' => 'WalkerChiu\SiteCMS\Models\Observers\LayoutLangObserver',
             'layoutRepository'   => 'WalkerChiu\SiteCMS\Models\Repositories\LayoutRepository',
             'verifyEnable'       => 'WalkerChiu\SiteCMS\Middleware\verifyEnable'
+        ],
+        'site-mall' => [
+            'emailType'          => 'WalkerChiu\SiteMall\Models\Constants\EmailType',
+            'layoutType'         => 'WalkerChiu\SiteMall\Models\Constants\LayoutType',
+            'site'               => 'WalkerChiu\SiteMall\Models\Entities\Site',
+            'siteObserver'       => 'WalkerChiu\SiteMall\Models\Observers\SiteObserver',
+            'siteLang'           => 'WalkerChiu\SiteMall\Models\Entities\SiteLang',
+            'siteLangObserver'   => 'WalkerChiu\SiteMall\Models\Observers\SiteLangObserver',
+            'siteRepository'     => 'WalkerChiu\SiteMall\Models\Repositories\SiteRepository',
+            'email'              => 'WalkerChiu\SiteMall\Models\Entities\Email',
+            'emailObserver'      => 'WalkerChiu\SiteMall\Models\Observers\EmailObserver',
+            'emailLang'          => 'WalkerChiu\SiteMall\Models\Entities\EmailLang',
+            'emailLangObserver'  => 'WalkerChiu\SiteMall\Models\Observers\EmailLangObserver',
+            'emailRepository'    => 'WalkerChiu\SiteMall\Models\Repositories\EmailRepository',
+            'layout'             => 'WalkerChiu\SiteMall\Models\Entities\Layout',
+            'layoutObserver'     => 'WalkerChiu\SiteMall\Models\Observers\LayoutObserver',
+            'layoutLang'         => 'WalkerChiu\SiteMall\Models\Entities\LayoutLang',
+            'layoutLangObserver' => 'WalkerChiu\SiteMall\Models\Observers\LayoutLangObserver',
+            'layoutRepository'   => 'WalkerChiu\SiteMall\Models\Repositories\LayoutRepository',
+            'verifyEnable'       => 'WalkerChiu\SiteMall\Middleware\verifyEnable'
         ]
     ]
 ];
