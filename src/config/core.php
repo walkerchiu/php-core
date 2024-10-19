@@ -743,8 +743,11 @@ $config = [
         'morph-nav' => [
             'morphType'       => 'WalkerChiu\MorphNav\Models\Constants\MorphType',
             'nav'             => 'WalkerChiu\MorphNav\Models\Entities\Nav',
+            //'nav'             => 'WalkerChiu\MorphNav\Models\Entities\NavWithImage',
+            //'nav'             => 'WalkerChiu\MorphNav\Models\Entities\NavWithImageAndLink',
             'navObserver'     => 'WalkerChiu\MorphNav\Models\Observers\NavObserver',
             'navRepository'   => 'WalkerChiu\MorphNav\Models\Repositories\NavRepository',
+            //'navRepository'   => 'WalkerChiu\MorphNav\Models\Repositories\NavRepositoryWithImage',
             'navLang'         => 'WalkerChiu\MorphNav\Models\Entities\NavLang',
             'navLangObserver' => 'WalkerChiu\MorphNav\Models\Observers\NavLangObserver'
         ],
