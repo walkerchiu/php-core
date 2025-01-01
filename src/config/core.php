@@ -344,7 +344,7 @@ $config = [
             'settings'      => 'point_settings',
             'settings_lang' => 'point_settings_lang',
             'wallets'       => 'point_wallets',
-            'logs'          => 'point_logs'
+            'records'       => 'point_records'
         ],
         'role' => [
             'roles'             => 'role_roles',
@@ -846,9 +846,9 @@ $config = [
             'wallet'              => 'WalkerChiu\Point\Models\Entities\Wallet',
             'walletObserver'      => 'WalkerChiu\Point\Models\Observers\WalletObserver',
             'walletRepository'    => 'WalkerChiu\Point\Models\Repositories\WalletRepository',
-            'log'                 => 'WalkerChiu\Point\Models\Entities\Log',
-            'logObserver'         => 'WalkerChiu\Point\Models\Observers\LogObserver',
-            'logRepository'       => 'WalkerChiu\Point\Models\Repositories\LogRepository'
+            'record'              => 'WalkerChiu\Point\Models\Entities\Record',
+            'recordObserver'      => 'WalkerChiu\Point\Models\Observers\RecordObserver',
+            'recordRepository'    => 'WalkerChiu\Point\Models\Repositories\RecordRepository'
         ],
         'role' => [
             'role'                   => 'WalkerChiu\Role\Models\Entities\Role',
