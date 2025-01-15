@@ -17,7 +17,7 @@ class Language
      * @param String  $delimiter
      * @return Array
      */
-    public static function getCodes($delimiter = null): array
+    public static function getCodes($delimiter = '_'): array
     {
         $items = [];
         $zones = self::all();
